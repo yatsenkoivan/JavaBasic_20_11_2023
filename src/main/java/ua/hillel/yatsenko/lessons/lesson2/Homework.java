@@ -1,6 +1,6 @@
 package ua.hillel.yatsenko.lessons.lesson2;
 
-public class Homework_23_11
+public class Homework
 {
     public static void main(String[] args)
     {
