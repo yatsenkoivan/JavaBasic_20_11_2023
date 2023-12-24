@@ -4,16 +4,30 @@ import java.util.Scanner;
 
 public class HomeWork
 {
-    static int GetNextInt(Scanner sc)
+    static int GetNextIntN(Scanner sc)
     {
         int value;
-        while (!sc.hasNextInt())
+        do
         {
-            System.out.println("Введіть ціле число!");
-            sc.nextLine();
             System.out.print(": ");
-        }
-        value = sc.nextInt();
+            if (sc.hasNextInt())
+            {
+                value = sc.nextInt();
+                if (value > 0)
+                {
+                    break;
+                }
+                else
+                {
+                    System.out.println("Введіть додатнє число!");
+                }
+            }
+            else
+            {
+                System.out.println("Введіть ціле число!");
+            }
+            sc.nextLine();
+        } while (true);
         sc.nextLine();
         return value;
     }
@@ -25,10 +39,10 @@ public class HomeWork
         Scanner sc = new Scanner(System.in);
         int m, n;
 
-        System.out.print("Введіть M: ");
-        m = GetNextInt(sc);
-        System.out.print("Введіть N: ");
-        n = GetNextInt(sc);
+        System.out.println("Введіть M");
+        m = GetNextIntN(sc);
+        System.out.println("Введіть N:");
+        n = GetNextIntN(sc);
 
         int[][] matrix1 = new int[m][n];
         for (int i=0; i<matrix1.length; i++)
