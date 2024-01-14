@@ -1,6 +1,6 @@
 package ua.hillel.yatsenko.lessons.lesson11;
 
-public class Main
+public class BurgerMain
 {
     public static void main(String[] args)
     {
