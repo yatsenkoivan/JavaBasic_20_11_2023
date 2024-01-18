@@ -2,14 +2,14 @@ package ua.hillel.yatsenko.lessons.lesson12;
 
 public class User
 {
-    private String name;
+    private final String name;
     private String surname;
-    private int birthDay;
-    private int birthMonth;
-    private int birthYear;
+    private final int birthDay;
+    private final int birthMonth;
+    private final int birthYear;
     private int age;
-    private String email;
-    private String phoneNumber;
+    private final String email;
+    private final String phoneNumber;
     private double weight;
     private String pressure;
     private int steps;
